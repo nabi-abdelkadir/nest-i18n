@@ -1,3 +1,4 @@
 {
-  "greeting": "Hello, {name}!"
+  "greeting": "Hello, {name}!",
+  "cart": "You have {numOfProducts} products in your cart"
 }
