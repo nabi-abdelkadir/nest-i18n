@@ -18,6 +18,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.in18nService.translate('hello');
+    return this.in18nService.translate('hello' ,{name : 'nabi'});
   }
 }

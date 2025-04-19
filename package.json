@@ -25,6 +25,7 @@
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.4.17",
     "@types/accept-language-parser": "^1.5.7",
+    "@types/string-format": "^2.0.3",
     "accept-language-parser": "^1.5.0",
     "nestjs-i18n": "^10.5.1",
     "reflect-metadata": "^0.2.0",
