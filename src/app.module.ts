@@ -16,6 +16,7 @@ import * as path from 'path';
         { use: QueryResolver, options: ['lang', 'locale'] },
         AcceptLanguageResolver,
       ],
+      typesOutputPath: path.join(__dirname, '../src/generated/i18n.generated.ts'),
     }),
   ],
   controllers: [AppController],
