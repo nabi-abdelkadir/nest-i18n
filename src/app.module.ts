@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
+import { ClientsModule } from './clients/clients.module';
 import * as path from 'path';
 
 @Module({
@@ -18,6 +19,7 @@ import * as path from 'path';
       ],
       typesOutputPath: path.join(__dirname, '../src/generated/i18n.generated.ts'),
     }),
+    ClientsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
