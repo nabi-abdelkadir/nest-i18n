@@ -8,6 +8,13 @@ export type I18nTranslations = {
     "common": {
         "greeting": string;
         "farewell": string;
+        "test": {
+            "key": string;
+            "key2": string;
+            "key3": string;
+            "key4": string;
+            "key5": string;
+        };
     };
 };
 /* prettier-ignore */
