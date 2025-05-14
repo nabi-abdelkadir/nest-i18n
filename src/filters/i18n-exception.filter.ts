@@ -1,0 +1,27 @@
+import {
+  ArgumentsHost,
+  Catch,
+  ExceptionFilter,
+  HttpException,
+  HttpStatus,
+} from '@nestjs/common';
+import { I18nValidationException } from 'nestjs-i18n';
+import { Response } from 'express';
+
+@Catch(I18nValidationException)
+export class I18nValidationExceptionFilter implements ExceptionFilter {
+  catch(exception: I18nValidationException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse<Response>();
+
+    const errors = exception.errors.map((error) => {
+      return Object.values(error.constraints || {});
+    });
+
+    response.status(HttpStatus.BAD_REQUEST).json({
+      statusCode: HttpStatus.BAD_REQUEST,
+      error: 'Bad Request',
+      message: errors.flat(), // Flatten to match default behavior
+    });
+  }
+}

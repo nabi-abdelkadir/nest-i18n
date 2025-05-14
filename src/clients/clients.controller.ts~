@@ -11,7 +11,7 @@ export class ClientsController {
 
   @Get()
   greet(@I18n() i18n: I18nContext<I18nTranslations>) {
-   return  this.clientsService.greetUser("nabi")
+   return  this.clientsService.greetUser("nabi abdelkadir")
    /* return i18n.t('common.greeting', {
       args: { name: 'Nabi' },
     });*/
